@@ -6,5 +6,13 @@ struct Student {
     score: f64,
 }
 fn main() {
-    println!("Student Management Sytem");
+    let student = Student {
+        id: 1,
+        name: String::from("Chidiogo"),
+        age: 30,
+        course: String::from("Backend Development"),
+        score: 85.6,
+    };
+
+    println!("Student: {}", student.name);
 }
