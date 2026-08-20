@@ -6,7 +6,7 @@ struct Student {
     score: f64,
 }
 fn main() {
-    let student = Student {
+    let mut student = Student {
         id: 1,
         name: String::from("Chidiogo"),
         age: 30,
@@ -14,5 +14,7 @@ fn main() {
         score: 85.6,
     };
 
-    println!("Student: {}", student.name);
+    student.score = 90.4;
+
+    println!("Student: {}", student.score);
 }
