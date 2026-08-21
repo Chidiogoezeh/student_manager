@@ -9,6 +9,18 @@ struct Student {
     score: f64,
 }
 
+impl Student {
+    fn new(id: StudentId, name: String, age: u8, course: String, score: f64) -> Student {
+        Student {
+            id,
+            name,
+            age,
+            course,
+            score,
+        }
+    }
+}
+
 enum MenuOption {
     Add,
     Delete,
@@ -58,7 +70,16 @@ fn main() {
 
     match option {
         MenuOption::Add => {
-            println!("Adding student...");
+            let student = Student::new(
+                StudentId(1),
+                String::from("Chidiogo"),
+                30,
+                String::from("Backend Development"),
+                80.6,
+            );
+
+            println!("Student created");
+            println!("Name: {}", student.name);
         }
 
         MenuOption::Delete => {
