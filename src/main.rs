@@ -15,6 +15,26 @@ fn main() {
     };
 
     student.score = 90.4;
-
     println!("Student: {}", student.score);
+
+    let age = student.age;
+    println!("Age: {}", age);
+
+    let age = age + 1;
+    println!("New age: {}", age);
+
+    let student_id = "1004";
+    let student_id = student_id.parse::<u32>().unwrap();
+
+    println!("Passed Student ID (u32): {}", student_id);
+
+    // Mutability
+    let mut score = 75;
+    score = 86;
+    println!("Mutable score: {}", score);
+
+    // Shadowing
+    let score = 75;
+    let score = 86;
+    println!("Shadowed score: {}", score);
 }
