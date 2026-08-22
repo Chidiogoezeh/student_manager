@@ -19,6 +19,14 @@ impl Student {
             score,
         }
     }
+
+    fn display(&self) {
+        println!("ID: {}", self.id.0);
+        println!("Name: {}", self.name);
+        println!("Age: {}", self.age);
+        println!("Course: {}", self.course);
+        println!("Score: {}", self.score);
+    }
 }
 
 enum MenuOption {
@@ -79,7 +87,7 @@ fn main() {
             );
 
             println!("Student created");
-            println!("Name: {}", student.name);
+            student.display();
         }
 
         MenuOption::Delete => {
